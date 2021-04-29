@@ -21,5 +21,4 @@ from channels.auth import AuthMiddlewareStack
 
 application = ProtocolTypeRouter({
     "http": get_asgi_application(), 
-
 })
