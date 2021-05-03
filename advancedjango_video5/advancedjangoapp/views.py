@@ -3,7 +3,7 @@ import time
 import threading
 from .models import Student
 import asyncio
-# from channels.layers import get_channel_layer
+
 from asgiref.sync import sync_to_async
 async def func3():   #get
     return HttpResponse("Done")
@@ -14,11 +14,7 @@ def func():   #as_view
 
 def index(request):  #view
     print("index:" + str(threading.get_native_id()))
-    # channel_layer = get_channel_layer()
-    # await channel_layer.group_send("chat_first", {
-    #                 'type': 'chat_message',
-    #                 'message': "notification",
-    #                 })
+
     a = func
     #a._is_coroutine = asyncio.coroutines._is_coroutine
     print(asyncio.iscoroutinefunction(a))

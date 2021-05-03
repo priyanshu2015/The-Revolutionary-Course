@@ -14,11 +14,6 @@ def func():   #as_view
 
 def index(request):  #view
     print("index:" + str(threading.get_native_id()))
-    # channel_layer = get_channel_layer()
-    # await channel_layer.group_send("chat_first", {
-    #                 'type': 'chat_message',
-    #                 'message': "notification",
-    #                 })
     a = func
     #a._is_coroutine = asyncio.coroutines._is_coroutine
     print(asyncio.iscoroutinefunction(a))
